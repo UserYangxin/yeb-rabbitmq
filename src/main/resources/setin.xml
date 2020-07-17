@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="userDao01" class="com.shsxt.dao.UserDao"></bean>
+
+    <bean id="userServiceSet" class="com.shsxt.service.UserService01">
+        <property name="userDao" ref="userDao01"></property>
+        <property name="host" value="127.0.0.1"></property>
+        <property name="port" value="8080"></property>
+        <property name="list">
+            <list>
+                <value>MSI</value>
+                <value>Lenevo</value>
+                <value>Dell</value>
+            </list>
+        </property>
+        <property name="set">
+            <set>
+                <value>LOL</value>
+                <value>Dota</value>
+                <value>PUBG</value>
+            </set>
+        </property>
+        <property name="map">
+            <map>
+                <entry>
+                    <key><value>zhangSan</value></key>
+                    <value>湖南</value>
+
+                </entry>
+                <entry>
+                    <key><value>lisi</value></key>
+                    <value>四川</value>
+                </entry>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="林俊杰">一千年以后</prop>
+                <prop key="费玉清">千里之外</prop>
+                <prop key="周杰伦">mojitto</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>
